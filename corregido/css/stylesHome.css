@@ -1,0 +1,537 @@
+@import url("stylesGenerales.css");
+
+/* HERO */
+#header{
+  background-image: url("../assets/fondo-menu.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left:0;
+  gap: 10rem;
+  z-index: 10;
+}
+
+#header:before {
+  content: "";
+  backdrop-filter: blur(7px); /* Sirve para aplicar un efecto de desenfoque Gaussiano al área detrás de un elemento */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#header a{
+  z-index: 1;
+} 
+
+/* Estilos enlaces */
+#header nav a{
+  font-family: var(--font-type);
+  font-size: 16px;
+  font-weight: normal;
+  text-decoration: none;
+  color: var(--background);
+}
+
+#header nav a.active{
+  color: var(--text-brown)
+}
+
+/* Menú hamburguesa */
+
+#btn-menu {
+  background-color: transparent;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 1rem;
+}
+
+#header form {
+  display: none;
+}
+
+#header form button img {
+  height: 30px;
+}
+
+#main-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 4rem;
+}
+
+
+
+/* Slider */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    scroll-snap-align: start; /* Se alinea al inicio al hacer scroll */
+    overflow: hidden;  /* Crea un efecto de recorte para imágenes o texto que exceden el área de un contenedor */
+    margin-top: 65px;
+    
+}
+
+.sliders {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    animation: slide 12s infinite; /* Animación infinita */
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+}
+
+/* Radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Control del slider */
+#slide1:checked ~ .slides {
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+#slide3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+/* Indicadores */
+.navigation {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + .dot {
+    background-color: white;
+}
+
+/* Animación */
+@keyframes slide {
+  0%, 33.33% {
+      transform: translateX(0);
+  }
+  33.34%, 66.66% {
+      transform: translateX(-100%);
+  }
+  66.67%, 100% {
+      transform: translateX(-200%);
+  }
+}
+
+/* Sección de cards */
+#card-title hr{
+  width: 50%;
+  border: none;
+  border-top: 1px solid var(--text-brown);
+  margin-bottom: 2rem;
+}
+
+#card-title{
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--text-light-brown);
+  font-family: var(--font-type);
+  max-height: 100%;
+  scroll-margin-top: 80px; /* o lo que mida tu navbar */
+}
+
+#card-title p {
+  margin-bottom: 2rem;
+}
+
+.card-container::after {
+  clear: both;
+  display: block;
+  float: left;
+  content: "";
+  position: relative;
+  height: 2px;
+  width: 70%;
+  margin: 10px 30% 0 0;
+  border-radius: 2px;
+  padding: 0;
+}
+  
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--text-light-brown);
+  }
+  
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 600px;
+    transition: transform 0.3s ease;
+  }
+  
+.card:hover {
+    transform: translateY(-10px);
+  }
+  
+.card img {
+    width: 90%;
+    height: 250px;
+    max-width: 719px;
+    border-radius: 1rem;
+  }
+  
+.card-content {
+    padding: 20px;
+  }
+  
+h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: var(--text-gray);
+  }
+  
+.date {
+    font-weight: bold;
+    color: var(--text-light-brown);
+    margin-top: 10px;
+  }
+
+.separator {
+  margin-bottom: 20px; /* Espaciado entre el hr y el contenido */
+}
+
+.separator hr{
+  width: 50%;
+  border: none;
+  border-top: 1px solid var(--text-brown);
+  flex: 1
+}
+
+.content-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--text-light-brown);
+  border-radius: 10px;
+  max-height: 100%;
+  flex-direction: column;
+  text-align: center;
+}
+.subtitle {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+.description {
+  font-size: 0.8rem;
+  color: var(--text-intermediate-light-gray);
+  font-style: italic;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.details {
+  font-size: 0.95rem;
+  color: var(--text-light-brown);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.signature {
+  font-family: 'Cursive', sans-serif;
+  font-size: 1.2rem;
+  color: var(--text-gray);
+  font-style: italic;
+}
+
+/* Sección de about */
+#coffee-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--text-light-brown);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    scroll-margin-top: 100px; /* o lo que mida tu navbar */
+   
+  }
+ 
+  /* Sección de contenido */
+    #coffee-section .content-container,
+    #coffee-section .content-wrapper {
+      flex: 1 1 50%; /* Ocupa el 50% del ancho del contenedor */
+      box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    }
+
+  .text-container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+    /* Sección de contacto */
+  
+  #contact-section {
+    max-width: 800px;
+    margin: 0 auto;
+    scroll-margin-top: 120px; /* o lo que mida tu navbar */
+   }
+  
+  .container {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 1.4rem;
+    color: #333; 
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: var(--text-intermediate-light-gray);
+    margin-bottom: 20px;
+  }
+  
+  .description span {
+    font-size: 0.9rem;
+    color: var(--text-intermediate-light-gray);
+    font-style: italic;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    margin: 1rem;
+  }
+  
+  .form-group {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .form-group label{
+    text-align: left;
+  }
+  
+  .form-group .full-width {
+    width: 100%;
+  }
+  
+  label {
+    display: block;
+    font-size: 0.9rem;
+    color: #8B4513; /* Marrón */
+    margin-bottom: 5px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #8B4513; /* Marrón */
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #20B2AA; /* Verde agua */
+  }
+
+  .submit-btn {
+    background-color: var(--button-form-primary); /* Verde agua */
+    color: var(--background);
+    width: 100px;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: var(--button-form-secondary);
+  }
+  
+  .iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  /* Footer */
+  .contact-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family:var(--font-type);
+    background-image: url(../assets/fondo-menu.jpg);
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100px;  
+  }
+
+  .contact-footer h2{
+    font-size: 0.8rem;  
+  }
+
+/* Media Query */
+  
+@media (max-width: 1200px) {
+  #header {
+    justify-content: space-around;
+  }
+
+  #header #main-nav {
+    display: none;
+  }
+
+  #header #form-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1;
+  }
+  
+  #header form button img{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+  }
+
+  #btn-menu {
+    display: flex;
+    z-index: 1;
+  }
+
+  #mobile-nav:popover-open{
+    display: flex;
+    padding: 1rem;
+  }
+
+  #mobile-nav {
+    top: calc(14%);
+    left: calc(60.1vw + 8%);
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary);
+  }
+
+  .content-wrapper{
+    display: flex;
+    gap: 2rem;
+    padding: 40px;
+    background-color: var(--text-light-brown);
+    border-radius: 10px;
+   
+  }
+   
+  #coffee-section{
+    flex-wrap: wrap;
+  }
+    
+  #coffee-section .content-container {
+    flex: 0;
+  }
+  
+  .content-container picture img {
+    border-radius: 1.5rem;
+    width: 80%;
+    margin-top: 2rem;
+  }
+
+  .card{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+
+  .card-container{
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+   }
+   
+   .card img{
+    max-width: 500px;
+    border-radius: 1rem;
+  }
+
+  h2{
+    text-align: center;
+  }
+}
+
+
+ 
+
+  
