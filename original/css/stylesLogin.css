@@ -1,0 +1,100 @@
+@import url("stylesGenerales.css");
+
+  #login{
+    background-image: url("../assets/Login/fondoLogin.avif");
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    margin: 0 auto;
+    height: 100vh;
+  }
+
+  #login-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #login-title{
+    font-size: 38px;
+    font-weight: normal;
+    color: var(--background);
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .form-group {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .form-group label{
+    text-align: left;
+  }
+  
+  .form-group.full-width {
+    width: 100%;
+  }
+  
+  label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #8B4513; /* Marrón */
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #20B2AA; /* Verde agua */
+  }
+  
+  textarea {
+    resize: none;
+  }
+
+  #submit-btn {
+    background-color: var(--button-form-primary); /* Verde agua */
+    color: var(--background);
+    width: 100px;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #submit-btn:hover {
+    background-color: var(--button-form-secondary);
+  }
+
+  #submit-btn a{
+     text-decoration: none;
+     font-size: 15px;
+     font-weight: normal;
+     color: var(--background);
+  }
+
+  
+
+
+

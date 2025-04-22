@@ -1,0 +1,41 @@
+
+:root{
+    /* bg colors */
+    --background: #f9f9f9;
+    --primary: #333;
+    --secondary: RGB(106,115,111);
+  
+    
+    /* Text-colors */
+    --text-brown: #7a392a;
+    --text-black: #000;
+    --text-gray: #333;
+    --text-intermediate-light-gray: #666;
+    --text-light-gray: #999;
+    
+ 
+    /* Button-colors */
+    --button-form-primary: #20B2AA;
+    --button-form-secondary: #178f80;
+
+    /* Font Type  */
+    --font-type: Georgia, 'Times New Roman', Times, serif;
+    
+ }
+ 
+ * {
+   margin: 0;
+   padding: 0;
+   border: none;
+   box-sizing: border-box;
+ }
+ 
+ /* General */
+ body {
+     font-family: var(--font-type);
+     background-color: var(--background);
+     font-weight: bold;
+     overflow-y: scroll;
+     scroll-behavior: smooth; /* Suaviza el scroll */
+     max-width: 1920px;
+ }

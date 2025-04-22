@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CafeteríaJF</title>
+  <link rel="stylesheet" href="../css/stylesHome.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+        <a href="home.html">
+            <svg style= "cursor:pointer"width="132" height="50" xmlns="http://www.w3.org/2000/svg">
+                <text x="50%" y="50%" font-family="Georgia" font-size="20" fill="#FFFFFF" text-anchor="middle" alignment-baseline="middle" stroke="#D3D3D3" stroke-width="1">
+                    CafeteríaJF
+                </text>   
+            </svg>
+        </a>
+
+       <nav id="main-nav">
+            <a class="active" href="home.html">Bienvenidos</a>
+            <a href="#live-coffee-section">Beneficios</a>
+            <a href="#IrAMenu">Menu</a>
+            <a href="#IrAContacto">Contáctanos</a>
+       </nav>
+
+       <button type="button" id="btn-menu" popovertarget="mobile-nav" popovertargetaction="toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M5,7h2h12c1.1,0,2-0.9,2-2s-0.9-2-2-2H7H5C3.9,3,3,3.9,3,5S3.9,7,5,7z"></path>
+                <path d="M19,10h-3H5c-1.1,0-2,0.9-2,2s0.9,2,2,2h11h3c1.1,0,2-0.9,2-2S20.1,10,19,10z"></path>
+                <path d="M19,17h-6H5c-1.1,0-2,0.9-2,2s0.9,2,2,2h8h6c1.1,0,2-0.9,2-2S20.1,17,19,17z"></path>
+            </svg>
+        </button>
+
+        <nav id="mobile-nav" popover>
+            <a class="active" href="home.html">Bienvenidos</a>
+            <a href="#live-coffee-section">Beneficios</a>
+            <a href="#IrAMenu">Menu</a>
+            <a href="#IrAContacto">Contáctanos</a>
+        </nav> 
+  </header>
+
+  <!-- About Us o Beneficios -->
+  <div class="slider-container">
+        <!-- Radio buttons -->
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+
+        <!-- Slides -->
+        <div class="sliders">
+            <div class="slide">
+                <img src="../assets/Slider/imagen1.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="../assets/Slider/imagen2.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="../assets/Slider/imagen3.jpg" alt="Slide 3">
+            </div>
+        </div>
+
+        <!-- Indicadores -->
+        <div class="navigation">
+            <label for="slide1" class="dot"></label>
+            <label for="slide2" class="dot"></label>
+            <label for="slide3" class="dot"></label>
+        </div>
+    </div>
+
+   
+    <!-- Hero -->
+    <section id="live-coffee-section"> 
+        <div class="content-wrapper">
+            <!-- Text Section -->
+            <div class="text-container">
+                <p style="color: #7a392a" class="subtitle">Bienvenidos/as</p>
+                <h2>CafeteríaJF</h2> 
+            </div>
+            <div class="content-container">
+                <picture class="card">
+                    <img src="../assets/About Us/About.jpg" alt="">
+                </picture>
+            </div>
+            <div class="text-container">
+                <p class="description">Nuestro compromiso es ofrecerte un café de calidad en un ambiente que te haga sentir como en casa.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección de Cards -->
+    <div id="IrAMenu" class="card-title">
+        <h2>Menú</h2>
+        <p class="description">Descubre nuestros productos de la mejor calidad.</p>
+        <!-- <hr> -->
+    </div>   
+    <!-- Contenedor de Cards -->
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="../assets/Cards/cafe.jpg" alt="Café Espresso">
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="../assets/Cards/LicuadoTorta.jpg" alt="Cafeteria-JF">
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="../assets/Cards/submarino.jpg" alt="Submarino">
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="../assets/Cards/cafe2.jpg" alt="Submarino">
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <img src="../assets/Cards/tostadosJugoNaranja.webp" alt="Submarino">
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <img src="../assets/Cards/cafeConMasas.jpg" alt="Submarino">
+        </div>
+    </div>    
+  
+
+    <!-- Sección de Contacto -->
+    <section id="IrAContacto" class="contact-section">
+        <div class="container">
+            <h1>Contáctanos</h1>
+            <p class="description">
+                Para cualquier comentario, sugerencia o consulta, no dudes en dejarnos tus datos...
+            </p>
+            <form action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar</button>
+            </form>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102473.5250216829!2d-64.3836373230302!3d-36.61922119612977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95c2cd07f7558a33%3A0x7bda8c2a7b70fd81!2sSanta%20Rosa%2C%20La%20Pampa!5e0!3m2!1ses-419!2sar!4v1734448644988!5m2!1ses-419!2sar" width="760" height="450" style="border:0; margin-top:1rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="contact-footer">
+        <p>&copy; 2024 CafeteríaJF</p>
+        <h2 style="color:var(--background)">Todos los derechos reservados. Sitio Web realizado por Jonathan.</h2>
+    </footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
