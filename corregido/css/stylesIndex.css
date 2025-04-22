@@ -1,0 +1,105 @@
+@import url("stylesGenerales.css");
+
+#header{
+  background-image: url("../assets/fondo-menu.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  max-width: 1920px;
+  height: 80px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left:0;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10rem;
+}
+
+#header:before {
+  content: "";
+  backdrop-filter: blur(7px); /* Sirve para aplicar un efecto de desenfoque Gaussiano al área detrás de un elemento */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+#header a{
+  margin-left: 10rem;
+  z-index: 1;
+}
+
+.menu-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  background-color: var(--text-light-brown);
+  border-radius: 10px;
+  height: 100vh;  
+}
+
+.menu-login__submit-btn{
+    background-color: var(--button-form-primary);
+    color: var(--background);
+    width: 100px;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-login__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-image: url("../assets/Login/ImagenLoginCafeteríaJF.jpg");
+  background-image: url("../assets/Login/ImagenLoginCafeteríaJF.jpg");
+  background-size: cover; /* Ajusta el tamaño de la imagen */
+  background-position: center;
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  height: 100vh; /* Permite que el contenedor crezca según su contenido */
+  width: 100%; /* Ocupa todo el ancho */
+  max-width: 1920px;
+}
+
+.menu-login__submit-btn{
+    background-color: var(--button-form-primary);
+    color: var(--background);
+    width: 150px;
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-login__submit-btn__enlace{
+  text-decoration: none;
+  color: var(--button-background);
+}
+
+.menu-login__title{
+  color: var(--background);
+  font-size: 38px;
+}
+
+
+@media(max-width: 1200px){
+  #header a{
+    margin-left: 0;
+  }
+  .menu-login__title{
+    text-align: center;
+  }
+  
+}

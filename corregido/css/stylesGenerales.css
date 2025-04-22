@@ -21,10 +21,7 @@
 
     /* Font Type  */
     --font-type: Georgia, 'Times New Roman', Times, serif;
-
-
-    
- }
+  }
  
  * {
    margin: 0;
@@ -38,7 +35,7 @@
      font-family: var(--font-type);
      background-color: var(--background);
      font-weight: bold;
-     overflow-x: hidden;
+     overflow-x: hidden;   
      scroll-behavior: smooth; /* Suaviza el scroll */
      max-width: 1920px;
  }
